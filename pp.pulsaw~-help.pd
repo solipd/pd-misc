@@ -1,0 +1,48 @@
+#N canvas 310 195 750 454 10;
+#X obj 110 406 dac~;
+#X floatatom 112 104 5 0 0 0 - - -, f 5;
+#X obj 335 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 335 132 \; pd dsp \$1;
+#N canvas 62 50 450 278 (subpatch) 0;
+#X array \$0-scope 441 float 0;
+#X coords 0 1 440 -1 200 140 1 0 0;
+#X restore 333 194 graph;
+#X obj 138 239 loadbang;
+#X msg 187 199 0, f 4;
+#X text 220 202 reset phase;
+#X obj 207 243 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 138 285 tabwrite~ \$0-scope;
+#X text 152 105 frequency(Hz);
+#X text 108 58 https://github.com/cfloisand/pd-polyblep/blob/master/Source/polyblep~.c
+;
+#X obj 138 262 metro 100;
+#X obj 135 158 phasor~ 0.1;
+#X obj 112 124 sig~ 220;
+#X obj 111 198 pp.pulsaw~;
+#X text 218 159 modulation;
+#X text 107 29 Band-limited saw-to-pulse oscillator based on christian
+foisland's polyblep implementation:;
+#X text 108 4 pp.pulsaw~;
+#X floatatom 141 315 5 0 0 0 - - -, f 5;
+#X obj 141 334 dbtorms;
+#X msg 141 356 \$1 100;
+#X obj 141 378 line~;
+#X obj 111 379 *~;
+#X connect 1 0 14 0;
+#X connect 2 0 3 0;
+#X connect 5 0 12 0;
+#X connect 6 0 15 2;
+#X connect 8 0 12 0;
+#X connect 12 0 9 0;
+#X connect 13 0 15 1;
+#X connect 14 0 15 0;
+#X connect 15 0 9 0;
+#X connect 15 0 23 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 22 0 23 1;
+#X connect 23 0 0 0;
+#X connect 23 0 0 1;

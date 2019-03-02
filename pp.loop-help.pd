@@ -1,0 +1,14 @@
+#N canvas 501 246 450 300 10;
+#X obj 132 58 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 132 168 print;
+#X floatatom 166 96 5 0 0 0 - - -, f 5;
+#X floatatom 201 117 5 0 0 0 - - -, f 5;
+#X obj 132 141 pp.loop 5 20;
+#X text 159 78 count from;
+#X text 210 100 to;
+#X text 125 39 fire;
+#X connect 0 0 4 0;
+#X connect 2 0 4 1;
+#X connect 3 0 4 2;
+#X connect 4 0 1 0;

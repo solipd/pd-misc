@@ -1,0 +1,135 @@
+#N canvas 388 52 636 713 10;
+#X msg 71 232 clear;
+#X obj 23 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 49 183 output;
+#X msg 93 371 randomize;
+#X msg 93 326 clear \, set 1 3 1 \, set 2 1 1 \, set 2 3 1 \, set 3
+2 1 \, set 3 3 1;
+#X msg 105 424 getrow \$1;
+#X msg 105 468 getcolumn \$1;
+#X floatatom 105 404 5 0 0 0 - - -, f 5;
+#X floatatom 106 450 5 0 0 0 - - -, f 5;
+#X obj 171 788 print out-right;
+#X text 54 146 bang for the next lifecircle;
+#X text 103 173 dump current state in lists of three values for each
+cell out of the left outlet: horizontal-coordinate \, vertical coordinate
+\, value (1=alive \, 0=dead);
+#X text 120 232 kill all cells;
+#X text 93 267 message "set" followed by a list of three integers:
+horizontal-coordinate \, vertical coordinate \, value (1=alive \, 0=dead)
+;
+#X text 92 308 here is a simple "glider":;
+#X text 170 370 sets state of each cell randomly;
+#X text 200 422 getrow n \, getcolumn n sends a list of the states
+of the cells in the row/column designated by the number out of the
+right outlet;
+#N canvas 590 119 635 770 example_gol-sequencer 0;
+#X msg 93 66 set 1 3 1 \, set 2 1 1 \, set 2 3 1 \, set 3 2 1 \, set
+3 3 1;
+#X msg 253 245 getrow \$1;
+#X obj 332 149 f;
+#X obj 365 149 + 1;
+#X obj 365 170 mod 10;
+#X obj 332 289 vradio 10 1 0 10 empty empty empty 0 -8 0 10 -262144
+-1 -1 3;
+#X obj 332 101 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 253 182 t f f;
+#X obj 286 212 sel 0;
+#X obj 222 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 225 405 unpack f f f f f f f f f f;
+#X obj 225 427 sel 1;
+#X obj 244 448 sel 1;
+#X obj 264 468 sel 1;
+#X obj 284 488 sel 1;
+#X obj 304 512 sel 1;
+#X obj 324 533 sel 1;
+#X obj 344 553 sel 1;
+#X obj 364 573 sel 1;
+#X obj 384 592 sel 1;
+#X obj 404 612 sel 1;
+#X obj 225 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 244 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 264 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 284 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 304 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 324 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 344 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 364 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 384 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 404 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 392 101 5 0 0 0 - - -, f 5;
+#X obj 332 123 metro 500;
+#X obj 224 286 pp.gol;
+#X connect 0 0 33 0;
+#X connect 1 0 33 0;
+#X connect 2 0 3 0;
+#X connect 2 0 5 0;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 1;
+#X connect 6 0 32 0;
+#X connect 7 0 1 0;
+#X connect 7 1 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 33 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 10 2 13 0;
+#X connect 10 3 14 0;
+#X connect 10 4 15 0;
+#X connect 10 5 16 0;
+#X connect 10 6 17 0;
+#X connect 10 7 18 0;
+#X connect 10 8 19 0;
+#X connect 10 9 20 0;
+#X connect 11 0 21 0;
+#X connect 12 0 22 0;
+#X connect 13 0 23 0;
+#X connect 14 0 24 0;
+#X connect 15 0 25 0;
+#X connect 16 0 26 0;
+#X connect 17 0 27 0;
+#X connect 18 0 28 0;
+#X connect 19 0 29 0;
+#X connect 20 0 30 0;
+#X connect 31 0 32 1;
+#X connect 32 0 2 0;
+#X connect 33 1 10 0;
+#X restore 359 584 pd example_gol-sequencer;
+#X text 35 39 arguments:;
+#X text 34 21 [pp.gol] Game of life - matrix;
+#X obj 22 790 print out-left;
+#X msg 106 513 outputmode \$1;
+#X obj 106 494 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 62 57 1: x-size of the matrix (default 10), f 37;
+#X text 62 83 3: outputmode (default 0);
+#X obj 22 597 pp.gol 15 17;
+#X text 76 571 [pp.gol 15 17];
+#X text 62 70 2: y-size of the matrix (default 10);
+#X connect 0 0 25 0;
+#X connect 1 0 25 0;
+#X connect 2 0 25 0;
+#X connect 3 0 25 0;
+#X connect 4 0 25 0;
+#X connect 5 0 25 0;
+#X connect 6 0 25 0;
+#X connect 7 0 5 0;
+#X connect 8 0 6 0;
+#X connect 21 0 25 0;
+#X connect 22 0 21 0;
+#X connect 25 0 20 0;
+#X connect 25 1 9 0;

@@ -1,0 +1,28 @@
+#N canvas 507 219 761 404 10;
+#X obj 219 129 f \$2;
+#X obj 218 31 inlet;
+#X obj 360 21 inlet;
+#X obj 47 170 inlet~;
+#X obj 48 273 outlet~;
+#X obj 164 65 loadbang;
+#X obj 386 137 f \$1;
+#X text 435 139 attack;
+#X obj 48 225 fexpr~ max(-$f2 \, min($f3 \, ($x1-$y1[-1])))+$y1[-1]
+;
+#X msg 218 171 1 \$1;
+#X obj 218 193 /;
+#X msg 386 171 1 \$1;
+#X obj 386 193 /;
+#X text 261 140 decay;
+#X connect 0 0 9 0;
+#X connect 1 0 6 0;
+#X connect 2 0 0 0;
+#X connect 3 0 8 0;
+#X connect 5 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 11 0;
+#X connect 8 0 4 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 1;
+#X connect 11 0 12 0;
+#X connect 12 0 8 2;

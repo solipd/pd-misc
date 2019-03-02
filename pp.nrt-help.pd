@@ -1,0 +1,11 @@
+#N canvas 509 307 450 300 10;
+#X obj 199 155 pp.nrt 3;
+#X floatatom 132 92 5 0 0 0 - - -, f 5;
+#X floatatom 199 177 5 0 0 0 - - -, f 5;
+#X floatatom 132 177 5 0 0 0 - - -, f 5;
+#X obj 132 155 pp.nrt 2;
+#X text 77 39 [pp.nrt] -calculate the nth root;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 0 4 0;
+#X connect 4 0 3 0;

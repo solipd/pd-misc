@@ -1,0 +1,11 @@
+#N canvas 532 292 450 300 10;
+#X floatatom 142 115 5 0 0 0 - - -, f 5;
+#X obj 142 134 pp.keys 4;
+#X floatatom 142 189 5 0 0 0 - - -, f 5;
+#X floatatom 213 188 5 0 0 0 - - -, f 5;
+#X text 180 113 <-- octave nr. or use "+" and "-";
+#X text 41 58 [pp.keys] - rudimentary midi-keyboard;
+#X text 47 85 arguments: \$1: octave nr.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;

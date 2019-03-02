@@ -1,0 +1,17 @@
+#N canvas 538 102 701 467 10;
+#N canvas 0 50 450 300 (subpatch) 0;
+#X array array 100 float 2;
+#X coords 0 100 99 -100 200 140 1 0 0;
+#X restore 72 273 graph;
+#X floatatom 72 167 5 0 0 0 - - -, f 5;
+#N canvas 0 50 450 300 (subpatch) 0;
+#X array array2 100 float 2;
+#X coords 0 100 99 -100 200 140 1 0 0;
+#X restore 289 272 graph;
+#X msg 119 167 set array2;
+#X obj 72 30 vsl 15 128 -100 100 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5300 1;
+#X obj 72 224 pp.timeroll array;
+#X connect 1 0 5 0;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;

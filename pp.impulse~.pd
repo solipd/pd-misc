@@ -1,0 +1,14 @@
+#N canvas 365 127 499 353 10;
+#X msg 306 133 0 1;
+#X obj 307 155 s \$0-onesamp;
+#X obj 306 114 loadbang;
+#X obj 124 162 tabplay~ \$0-onesamp;
+#X obj 125 197 outlet~;
+#X obj 307 189 table \$0-onesamp 1;
+#X obj 124 118 inlet;
+#X obj 124 140 t b;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;

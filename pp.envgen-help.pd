@@ -1,0 +1,17 @@
+#N canvas 237 141 409 544 10;
+#X obj 98 115 vradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X floatatom 98 184 5 0 0 0 - - -, f 5;
+#X floatatom 165 155 5 0 0 0 - - -, f 5;
+#X floatatom 233 157 5 0 0 0 - - -, f 5;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0-myarray 1000 float 2;
+#X coords 0 1 999 -1 200 140 1 0 0;
+#X restore 100 267 graph;
+#X text 47 76 arguments: \$1: array name;
+#X text 45 44 [pp.envgen] - generate 4 types of simple envelopes;
+#X obj 98 205 pp.envgen \$0-myarray;
+#X connect 0 0 1 0;
+#X connect 1 0 7 0;
+#X connect 2 0 7 1;
+#X connect 3 0 7 2;

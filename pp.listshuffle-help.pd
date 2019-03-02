@@ -1,0 +1,7 @@
+#N canvas 452 359 450 300 10;
+#X obj 121 116 pp.listshuffle;
+#X msg 121 90 list 1 2 3 4 5 a b c d e;
+#X obj 121 139 print;
+#X text 87 43 [pp.listshuffle] - randomize a list;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;

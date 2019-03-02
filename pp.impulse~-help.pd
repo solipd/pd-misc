@@ -1,0 +1,9 @@
+#N canvas 0 50 450 300 10;
+#X obj 199 133 pp.impulse~;
+#X obj 183 105 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 183 158 print~;
+#X text 270 101 one sample impulse;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 0 2 0;

@@ -1,0 +1,11 @@
+#N canvas 365 208 400 300 10;
+#X msg 152 75 1 2 three;
+#X floatatom 56 105 5 0 0 0 - - -, f 5;
+#X obj 56 132 pp.listelement;
+#X msg 169 98 3 4 5 6 7 hate bananas;
+#X obj 56 155 print;
+#X text 54 27 [pp.listelement] - get the nth element of a list;
+#X connect 0 0 2 1;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 1;
