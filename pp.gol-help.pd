@@ -8,8 +8,8 @@
 2 1 \, set 3 3 1;
 #X msg 105 424 getrow \$1;
 #X msg 105 468 getcolumn \$1;
-#X floatatom 105 404 5 0 0 0 - - -, f 5;
-#X floatatom 106 450 5 0 0 0 - - -, f 5;
+#X floatatom 105 404 5 0 0 0 - - -;
+#X floatatom 106 450 5 0 0 0 - - -;
 #X obj 171 788 print out-right;
 #X text 54 146 bang for the next lifecircle;
 #X text 103 173 dump current state in lists of three values for each
@@ -70,7 +70,7 @@ right outlet;
 -1 -1;
 #X obj 404 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X floatatom 392 101 5 0 0 0 - - -, f 5;
+#X floatatom 392 101 5 0 0 0 - - -;
 #X obj 332 123 metro 500;
 #X obj 224 286 pp.gol;
 #X connect 0 0 33 0;
@@ -118,7 +118,6 @@ right outlet;
 #X text 62 57 1: x-size of the matrix (default 10), f 37;
 #X text 62 83 3: outputmode (default 0);
 #X obj 22 597 pp.gol 15 17;
-#X text 76 571 [pp.gol 15 17];
 #X text 62 70 2: y-size of the matrix (default 10);
 #X connect 0 0 25 0;
 #X connect 1 0 25 0;
