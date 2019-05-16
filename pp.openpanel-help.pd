@@ -1,0 +1,9 @@
+#N canvas 2 54 568 300 10;
+#X obj 135 141 pp.openpanel;
+#X obj 135 116 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 135 164 print;
+#X text 178 122 like openpanel \, but remembers the last directory
+;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
