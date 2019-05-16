@@ -1,9 +1,0 @@
-#N canvas 435 193 450 300 10;
-#X symbolatom 114 158 10 0 0 0 - - -, f 10;
-#X obj 113 113 symbol;
-#X obj 114 135 pp.filename;
-#X msg 113 90 /hululu/user/blubb.wav;
-#X text 86 47 [pp.filename];
-#X connect 1 0 2 0;
-#X connect 2 0 0 0;
-#X connect 3 0 1 0;

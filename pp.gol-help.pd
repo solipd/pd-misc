@@ -1,4 +1,4 @@
-#N canvas 388 52 636 713 10;
+#N canvas 388 54 636 712 10;
 #X msg 71 232 clear;
 #X obj 23 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -24,51 +24,51 @@ horizontal-coordinate \, vertical coordinate \, value (1=alive \, 0=dead)
 #X text 200 422 getrow n \, getcolumn n sends a list of the states
 of the cells in the row/column designated by the number out of the
 right outlet;
-#N canvas 590 119 635 770 example_gol-sequencer 0;
+#N canvas 590 54 635 712 example_gol-sequencer 0;
 #X msg 93 66 set 1 3 1 \, set 2 1 1 \, set 2 3 1 \, set 3 2 1 \, set
 3 3 1;
 #X msg 253 245 getrow \$1;
 #X obj 332 149 f;
 #X obj 365 149 + 1;
 #X obj 365 170 mod 10;
-#X obj 332 289 vradio 10 1 0 10 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+#X obj 332 303 vradio 10 1 0 10 empty empty empty 0 -8 0 10 -262144
+-1 -1 1;
 #X obj 332 101 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 253 182 t f f;
 #X obj 286 212 sel 0;
 #X obj 222 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 225 405 unpack f f f f f f f f f f;
-#X obj 225 427 sel 1;
-#X obj 244 448 sel 1;
-#X obj 264 468 sel 1;
-#X obj 284 488 sel 1;
-#X obj 304 512 sel 1;
-#X obj 324 533 sel 1;
-#X obj 344 553 sel 1;
-#X obj 364 573 sel 1;
-#X obj 384 592 sel 1;
-#X obj 404 612 sel 1;
-#X obj 225 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 323 422 unpack f f f f f f f f f f;
+#X obj 323 444 sel 1;
+#X obj 342 465 sel 1;
+#X obj 362 485 sel 1;
+#X obj 382 505 sel 1;
+#X obj 402 529 sel 1;
+#X obj 422 550 sel 1;
+#X obj 442 570 sel 1;
+#X obj 462 590 sel 1;
+#X obj 482 609 sel 1;
+#X obj 502 629 sel 1;
+#X obj 323 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 244 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 342 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 264 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 362 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 284 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 382 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 304 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 402 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 324 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 422 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 344 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 442 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 364 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 462 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 384 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 482 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 404 634 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 502 651 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 392 101 5 0 0 0 - - -;
 #X obj 332 123 metro 500;
