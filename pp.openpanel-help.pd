@@ -1,12 +1,13 @@
 #N canvas 2 54 568 300 10;
-#X obj 135 141 pp.openpanel;
-#X obj 135 37 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 135 164 print;
-#X text 178 122 like openpanel \, but remembers the last directory
-;
-#X msg 172 89 reset;
-#X text 150 38 open;
+#X obj 121 233 pp.openpanel;
+#A saved ;
+#X obj 121 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 121 256 print;
+#X text 112 59 like openpanel \, but remembers the last directory;
+#X msg 139 161 reset;
+#X text 136 130 open;
+#X text 179 158 reset to directory of the parrent patch;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 4 0 0 0;
