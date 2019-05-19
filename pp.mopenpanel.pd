@@ -82,10 +82,10 @@
 #X obj 68 352 symbol ./;
 #X obj 119 169 symbol ./;
 #X obj 141 351 symbol ./;
-#X obj 177 207 savestate;
-#X obj 228 229 symbol ./;
-#X obj 177 257 list trim;
-#X obj 177 280 symbol;
+#X obj 192 198 savestate;
+#X obj 291 299 symbol ./;
+#X obj 192 226 list trim;
+#X obj 192 249 symbol;
 #X connect 0 0 14 1;
 #X connect 0 0 16 1;
 #X connect 1 0 11 0;
@@ -112,3 +112,5 @@
 #X connect 16 0 15 0;
 #X connect 17 0 18 0;
 #X connect 18 0 12 1;
+#X connect 18 0 14 1;
+#X connect 18 0 16 1;
